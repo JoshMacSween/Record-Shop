@@ -1,0 +1,28 @@
+body{
+  background-image: linear-gradient(140deg, white, black);
+  font-family: tahoma;
+  color: #282828;
+}
+
+.product {
+  display: flex;
+  flex-flow: wrap;
+  padding: 1rem;
+}
+
+.product-image, img {
+  width: 50%;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.ul, li {
+  list-style: none;
+  text-indent: 1em;
+}
+
+ul, h5{
+  text-indent: 5em;
+}

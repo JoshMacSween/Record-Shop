@@ -1,0 +1,49 @@
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="product">
+        <div class="product-image">
+          <img v-bind:src="image">
+        </div>
+
+        <div class="product-info">
+          <h1>Record Wizards</h1>
+          <h3>Records and Tapes</h3>
+          <h2>{{product}}</h2>
+        </div>
+
+        <div class="cart">
+          <p>Cart ({{ cart }})</p>
+        </div>
+
+      </div>
+
+        <div class="stock">
+          <h2>Records</h2>
+        <div v-for="record in records" :key="records.recordId">
+        <li @mouseover="updateProduct(record.recordImage)">
+          <div v-on:click="addToCart">
+            <h3>{{record.recordArtist}}, {{record.recordTitle}}</h3></li>
+            <li>{{record.recordPrice}}</li>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
+
