@@ -16,8 +16,7 @@
         </div>
 
         <div class="product-info">
-          <h1>Record Wizards</h1>
-          <h3>Records and Tapes</h3>
+          <h1>Record Wizard</h1>
           <h2>{{product}}</h2>
         </div>
 
@@ -27,13 +26,15 @@
 
       </div>
 
+      <stock></stock>
+
+
         <div class="stock">
-          <h2>Records</h2>
+          <h2>New In Stock!</h2>
         <div v-for="record in records" :key="records.recordId">
-        <li @mouseover="updateProduct(record.recordImage)">
-          <div v-on:click="addToCart">
+        <li v-on:click="updateProduct(record.recordImage)">
+          <div>
             <h3>{{record.recordArtist}}, {{record.recordTitle}}</h3></li>
-            <li>{{record.recordPrice}}</li>
           </div>
         </div>
       </div>
@@ -46,4 +47,3 @@
 
   </body>
 </html>
-

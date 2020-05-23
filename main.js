@@ -1,3 +1,26 @@
+Vue.component('stock', {
+
+  template: `
+  <div>
+    <h1>stock</h1>
+    <ul>
+      <li v-for="genre in genres">{{genre.genre}}</li>
+    </ul>
+  </div>
+  `,
+  data() {
+    return {
+      genres: [{
+        genreId: 1,
+        genre: "Rock",
+      }, {
+        genreId: 2,
+        genre: "Punk",
+      }],
+    }
+  }
+})
+
 var app = new Vue({
   el:'#app',
   data: {
@@ -32,8 +55,8 @@ var app = new Vue({
       this.image = recordImage
     },
 
-    addToCart(recordPrice){
-      this.cart += recordPrice
+    addToCart(){
+      this.cart += 1
     }
   }
 })
